@@ -1,0 +1,11 @@
+<?php if ($this->isEnabled()) : ?>
+    <div class="uploader">
+        <?php foreach ($this->getCollection() as $image) : ?>
+            <div class="uploader-image">
+                <img src="<?php echo $this->getImagePath($image->getImage())?>"
+                     alt="<?php echo $image->getName()?>" />
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
+

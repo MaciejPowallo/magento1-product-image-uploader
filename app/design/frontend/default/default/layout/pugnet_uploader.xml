@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addCss"><script>pugnet/uploader/uploader.css</script></action>
+        </reference>
+        <reference name="content">
+            <block type="pugnet_uploader/form"
+                   after="alert.urls"
+                   as="images_uploader"
+                   name="product.uploader.form"
+                   template="catalog/product/uploader/form.phtml"/>
+            <block type="pugnet_uploader/images"
+                   after="product.uploader.form"
+                   name="product.uploader.images"
+                   template="catalog/product/uploader/images.phtml"/>
+        </reference>
+    </catalog_product_view>
+</layout>

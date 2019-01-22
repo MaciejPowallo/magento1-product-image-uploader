@@ -1,0 +1,34 @@
+<?php if ($this->isEnabled()) : ?>
+    <div class="uploader">
+        <div class="title">
+            <h2><?php echo $this->__('Product Image Uploader');?></h2>
+        </div>
+        <div class="form-list">
+            <form name="uploader" id="uploader" action="<?php echo $this->getUploaderFormAction() ?>"
+                  enctype="multipart/form-data" method="post">
+                <?php echo $this->getBlockHtml('formkey'); ?>
+                <div class="input-box">
+                    <label for="image"><?php echo $this->__('Add a product image') ?><em>*</em></label>
+                    <input type="file" id="image" name="image" title="<?php echo $this->__('Add a product image')?>"
+                           class="input-image required-entry" />
+                </div>
+                <div class="input-box">
+                    <input type="text" id="product_id" name="product_id" class="input-text hidden"
+                           style="display:none !important;" value="<?php echo $this->getProductId() ?>"/>
+                </div>
+                <div class="buttons-set edit-buttons-set">
+                    <button type="submit" class="button">
+                        <span class="arrow arrow-white">
+                            <span><?php echo $this->__('Upload image')?></span>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        var dataForm = new VarienForm('uploader', true);
+        //]]>
+    </script>
+<?php endif; ?>

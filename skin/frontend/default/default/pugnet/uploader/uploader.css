@@ -1,0 +1,30 @@
+.uploader {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.uploader em{
+    color: red;
+}
+
+.uploader .title {
+    justify-content: center;
+    width: 100%;
+}
+
+.uploader .title h2{
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+}
+
+.uploader .uploader-image {
+    display: block;
+}
+
+.uploader .uploader-image img {
+    padding: 10px;
+    max-height: 250px;
+    height: 100%;
+    width: auto;
+}

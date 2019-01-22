@@ -1,2 +1,3 @@
-# magento1-product-image-uploader
-Magento 1 - The module allows you to add photos to products by customers and manage them from the administration panel.
+# Customer Photo Uploader
+Magento 1 module
+The module allows to add photos to products by customers and manage them from the administration panel.
