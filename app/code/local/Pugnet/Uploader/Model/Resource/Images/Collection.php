@@ -2,8 +2,6 @@
 /**
  * Created by PhpStorm.
  * User: Pugnet Maciej Powallo
- * Date: 20.01.19
- * Time: 16:30
  */
 
 /**

@@ -2,8 +2,6 @@
 /**
  * Created by PhpStorm.
  * User: Pugnet Maciej Powallo
- * Date: 20.01.19
- * Time: 17:09
  */
 
 /**
@@ -55,7 +53,6 @@ class Pugnet_Uploader_IndexController extends Mage_Core_Controller_Front_Action
             } catch (Exception $e) {
                 Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
                 $this->_redirectReferer();
-                return;
             }
 
             try {
@@ -67,13 +64,11 @@ class Pugnet_Uploader_IndexController extends Mage_Core_Controller_Front_Action
                 Mage::getSingleton('adminhtml/session')->addSuccess($this->__('Image was successfully saved'));
                 Mage::getSingleton('adminhtml/session')->setItemsData(false);
                 $this->_redirectReferer();
-                return;
 
             } catch (Exception $e) {
                 Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
                 Mage::getSingleton('adminhtml/session')->setItemsData($this->getRequest()->getPost());
                 $this->_redirectReferer();
-                return;
             }
         }
         Mage::getSingleton('adminhtml/session')->addSuccess($this->__('Image has not been saved'));

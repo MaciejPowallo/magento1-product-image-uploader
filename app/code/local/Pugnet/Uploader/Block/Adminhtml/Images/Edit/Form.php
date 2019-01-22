@@ -2,9 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Pugnet Maciej Powallo
- * Date: 20.01.19
- * Time: 22:59
  */
+
 /**
  * Class Pugnet_Uploader_Block_Adminhtml_Images_Edit_Form
  */

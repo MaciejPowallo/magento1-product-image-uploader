@@ -2,8 +2,6 @@
 /**
  * Created by PhpStorm.
  * User: Pugnet Maciej Powallo
- * Date: 20.01.19
- * Time: 16:22
  */
 
 /**
@@ -18,6 +16,6 @@ class Pugnet_Uploader_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function isEnabled()
     {
-        return Mage::getStoreConfigFlag(self::IS_ENABLED);
+        return (bool)Mage::getStoreConfigFlag(self::IS_ENABLED);
     }
 }

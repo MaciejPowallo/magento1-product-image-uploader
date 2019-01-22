@@ -2,8 +2,6 @@
 /**
  * Created by PhpStorm.
  * User: Pugnet Maciej Powallo
- * Date: 20.01.19
- * Time: 17:00
  */
 
 /**
@@ -138,8 +136,6 @@ class Pugnet_Uploader_Adminhtml_ImagesController extends Mage_Adminhtml_Controll
             } catch (Exception $e) {
                 Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
                 $this->_redirect('*/*/edit', ['id' => $this->getRequest()->getParam('id')]);
-
-                return;
             }
 
             try {
@@ -153,18 +149,12 @@ class Pugnet_Uploader_Adminhtml_ImagesController extends Mage_Adminhtml_Controll
 
                 if ($this->getRequest()->getParam('back')) {
                     $this->_redirect('*/*/edit', ['id' => $model->getId()]);
-
-                    return;
                 }
                 $this->_redirect('*/*/');
-
-                return;
             } catch (Exception $e) {
                 Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
                 Mage::getSingleton('adminhtml/session')->setItemsData($this->getRequest()->getPost());
                 $this->_redirect('*/*/edit', ['id' => $this->getRequest()->getParam('id')]);
-
-                return;
             }
         }
         $this->_redirect('*/*/');
@@ -197,7 +187,6 @@ class Pugnet_Uploader_Adminhtml_ImagesController extends Mage_Adminhtml_Controll
                 Mage::logException($e);
             }
             $this->_redirect('*/*/edit', ['id' => $id]);
-            return;
         }
 
         $this->_getSession()->addError(

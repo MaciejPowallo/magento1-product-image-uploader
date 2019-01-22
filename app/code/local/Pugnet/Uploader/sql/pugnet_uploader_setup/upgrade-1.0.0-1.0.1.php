@@ -1,4 +1,9 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Pugnet Maciej Powallo
+ */
+
 /* @var $installer Mage_Catalog_Model_Resource_Setup */
 $installer = $this;
 $installer->startSetup();
@@ -17,7 +22,7 @@ if (!$attributeExists) {
             'input'            => 'multiselect',
             'visible'          => true,
             'required'         => false,
-            'visible_on_front' => false,
+            'visible_on_front' => true,
             'global'           => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_GLOBAL,
             'position'         => 50,
             'source'           => 'pugnet_uploader/product_attribute_source_images',

@@ -2,8 +2,6 @@
 /**
  * Created by PhpStorm.
  * User: Pugnet Maciej Powallo
- * Date: 21.01.19
- * Time: 18:03
  */
 
 /**
@@ -24,7 +22,7 @@ class Pugnet_Uploader_Block_Form extends Mage_Core_Block_Template
      */
     public function isEnabled()
     {
-        return (bool)Mage::helper('pugnet_uploader')->isEnabled();
+        return Mage::helper('pugnet_uploader')->isEnabled();
     }
 
     /**
